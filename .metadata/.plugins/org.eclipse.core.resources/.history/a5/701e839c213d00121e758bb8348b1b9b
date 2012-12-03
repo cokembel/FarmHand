@@ -1,0 +1,58 @@
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <AutoCompleteTextView
+                android:id="@+id/farm_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:ems="10" />
+
+            <Button
+                android:id="@+id/prev_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="55dp"
+                android:text="Previous" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/farm_name"
+                android:layout_alignBottom="@+id/farm_name"
+                android:layout_alignRight="@+id/prev_row"
+                android:text="@string/farm_name" />
+
+            <TextView
+                android:id="@+id/row_number"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@+id/prev_row"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/next_row"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/row_number"
+                android:text="Next" />
+
+        </RelativeLayout>
+       
+    </ScrollView>
+

@@ -1,0 +1,39 @@
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+             <AutoCompleteTextView
+                 android:id="@+id/farm_name"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_alignParentTop="true"
+                 android:ems="10" />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="14dp"
+                 android:text="@string/farm_name" />
+             
+             <Button
+                 android:id="@+id/prev_row"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="left"
+                 android:layout_marginTop="55dp"
+                 android:text="Previous" />
+              
+        </RelativeLayout>
+       
+    </ScrollView>
+

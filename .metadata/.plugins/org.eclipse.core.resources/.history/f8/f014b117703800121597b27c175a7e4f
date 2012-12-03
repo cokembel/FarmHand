@@ -1,0 +1,41 @@
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TableRow>
+                <TextView android:text="@string/farm_name" />
+                <AutoCompleteTextView
+                    android:id="@+id/farm_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow android:layout_width="match_parent" >
+                <Button
+                    android:id="@+id/prev_row"
+                    android:text="Previous" />
+                <TextView
+                    android:id="@+id/row_number"
+                    android:layout_height="match_parent"
+                    android:text="1" />
+                <Button 
+                    android:id="@+id/next_row" 
+                    android:text="Next" />
+            </TableRow>
+            <TableRow>
+                 <Button
+                     android:id="@+id/down"
+                     android:text="Down" />
+ 				 <Button
+ 				     android:id=@+id/not_down"
+ 				     android:text="Not Down" />
+            </TableRow>
+        </TableLayout>
+       
+    </ScrollView>
+

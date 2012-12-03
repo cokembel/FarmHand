@@ -1,0 +1,62 @@
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="239dp" >
+
+            <TableRow android:background="@drawable/borders">    
+                <TextView android:text="@string/farm_name" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/farm_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+            <TableRow android:background="@drawable/borders" >
+                <Button
+                    android:id="@+id/prev_row"
+                    android:text="Previous"
+                    android:layout_gravity="left" />
+                <TextView
+                    android:id="@+id/row_number"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:gravity="center" />
+                <Button 
+                    android:id="@+id/next_row" 
+                    android:text="Next"
+                    android:layout_gravity="right" />
+            </TableRow>
+            <TableRow android:background="@drawable/borders">
+                <TextView android:text="@string/status" />
+                <EditText android:id="@+id/current_status"
+                    android:text="N/A"
+                    android:layout_width="wrap_content"/>
+            </TableRow>
+
+            <TableRow android:background="@drawable/borders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                 <Button
+                     android:id="@+id/not_down"
+                     android:text="Not Down"
+                     android:layout_gravity="left" />
+
+ 				 <Button
+ 				     android:id="@+id/down"
+ 				     android:layout_width="fill_parent"
+ 				     android:layout_gravity="right"
+ 				     android:text="Down" />
+
+            </TableRow>
+        </TableLayout>
+       
+    </ScrollView>
+
