@@ -1,0 +1,5 @@
+package com.kembel.farmhand;
+
+public enum State {
+
+}

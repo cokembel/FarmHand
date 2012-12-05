@@ -1,0 +1,15 @@
+package com.kembel.farmhand;
+
+public class Row {
+	
+	private int number;
+	private State state;
+	
+	public int getNumber() {
+		return number;
+	}
+	
+	public State getState() {
+		return state;
+	}
+}
