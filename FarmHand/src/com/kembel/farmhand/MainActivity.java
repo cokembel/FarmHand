@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.TreeSet;
 
 import android.os.Bundle;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -17,29 +19,40 @@ public class MainActivity extends Activity {
 	private EditText farmName, status;
 	private TextView rowNum;
 	private Button down, notDown;
-	
 	private Button prev, next;
-    private Row currentRow;
-    private int currentRowNum, numRowsRecorded;
-    
-    private TreeSet<Row> farm = new TreeSet<Row>();
+	
+    private int currentRowNum;
+    private Farm farm;
+    private State currentState;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        currentRowNum = 0;
-        numRowsRecorded = 0;
-        currentRow = new Row(0,State.NOT_DOWN);
+        currentRowNum = 1;
+        farm = new Farm();
         
-        farmName = (EditText)findViewById(R.id.farm_name);
+        initializeFormComponents();
+        setListeners();  
+    }
+    
+    private void initializeFormComponents() {
+    	farmName = (EditText)findViewById(R.id.farm_name);
         status = (EditText)findViewById(R.id.current_status);
+        rowNum = (TextView)findViewById(R.id.row_number);
+
         down = (Button)findViewById(R.id.down_button);
         notDown = (Button)findViewById(R.id.not_down_button);
-        rowNum = (TextView)findViewById(R.id.row_number);
-        down.setOnClickListener(onDown);
-        notDown.setOnClickListener(onNotDown);
+        next = (Button)findViewById(R.id.next_row_button);
+        prev = (Button)findViewById(R.id.prev_row_button);
+    }
+    
+    private void setListeners() {
+    	 down.setOnClickListener(onDown);
+         notDown.setOnClickListener(onNotDown);
+         next.setOnClickListener(onNext);
+         prev.setOnClickListener(onPrev);
     }
     
     @Override
@@ -56,34 +69,71 @@ public class MainActivity extends Activity {
     private View.OnClickListener onDown = new View.OnClickListener() {
     	
     	public void onClick(View v) {
-    		setRowState(State.DOWN);
+    		recordRowState(State.DOWN);
+    		updateRowDisplay();
     	}
     };
     
     private View.OnClickListener onNotDown = new View.OnClickListener() {
 		
 		public void onClick(View v) {
-			setRowState(State.NOT_DOWN);
+			recordRowState(State.NOT_DOWN);
+			updateRowDisplay();
 		}
+		
 	};
 	
-	private void setRowState(State state){
-		currentRow.setNumber(currentRowNum);
-		currentRow.setState(state);
+	private View.OnClickListener onNext = new View.OnClickListener() {
 		
-		// if row with current row number exists
-		if (farm.contains(currentRow)) {
-			// removes row with same row number
-			// row may not have the same row state
-			farm.remove(currentRow);
+		public void onClick(View v) {
+			currentRowNum++;
+			updateRowDisplay();
 		}
 		
-		farm.add(currentRow);
+	};
+	
+	
+	private View.OnClickListener onPrev = new View.OnClickListener() {
 		
+		public void onClick(View v) {
+			if (currentRowNum == 1){
+				return;
+			}
+			
+			currentRowNum--;
+			updateRowDisplay();
+		}
+		
+	};
+	
+	private void recordRowState(State state) {
+		farm.insert(currentRowNum, state);
+				
 		currentRowNum++;
 		rowNum.setText(String.valueOf(currentRowNum));
 	}
     
+	
+	private void updateRowDisplay() {
+		if (farm.contains(currentRowNum)) {
+			currentState = farm.getState(currentRowNum);
+		} else {
+			currentState = State.NOT_SPECIFIED;
+			farm.insert(currentRowNum, currentState);
+		}
+		
+		if (currentState == State.DOWN) {
+			status.setTextColor(Color.GREEN);
+		} else if (currentState == State.NOT_DOWN) {
+			status.setTextColor(Color.RED);
+		} else {
+			status.setTextColor(Color.BLACK);
+		}
+		
+		// displays the appropriate row number and state
+		rowNum.setText(String.valueOf(currentRowNum));
+		status.setText(String.valueOf(currentState));
+	}
 
 	
 
