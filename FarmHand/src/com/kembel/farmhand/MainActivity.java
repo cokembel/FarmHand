@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
-	private EditText farmName, status;
-	private TextView rowNum;
+	private EditText farmName;
+	private TextView rowNum, status;
 	private Button down, notDown;
 	private Button prev, next;
 	
@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
     
     private void initializeFormComponents() {
     	farmName = (EditText)findViewById(R.id.farm_name);
-        status = (EditText)findViewById(R.id.current_status);
+        status = (TextView)findViewById(R.id.current_status);
         rowNum = (TextView)findViewById(R.id.row_number);
 
         down = (Button)findViewById(R.id.down_button);

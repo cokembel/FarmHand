@@ -42,9 +42,9 @@
                 android:layout_alignLeft="@id/farm_label"
                 android:text="@string/status" />
             
-            <EditText
+            <TextView
                 android:id="@+id/current_status"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@id/status_label"
                 android:layout_alignParentRight="true"
