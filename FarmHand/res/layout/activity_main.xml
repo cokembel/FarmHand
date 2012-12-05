@@ -17,21 +17,13 @@
                 android:layout_alignParentTop="true"
                 android:ems="10" />
 
-            <Button
-                android:id="@+id/prev_row_button"
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginTop="55dp"
-                android:text="Previous" />
-
             <TextView
                 android:id="@+id/farm_label"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@id/farm_name"
                 android:layout_alignBottom="@id/farm_name"
-                android:layout_alignRight="@id/prev_row_button"
+                android:layout_alignRight="@+id/prev_row_button"
                 android:text="@string/farm_name" />
 
             <TextView
@@ -82,12 +74,20 @@
 
             <Button
                 android:id="@+id/next_row_button"
-                android:layout_width="115dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignBottom="@+id/prev_row_button"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/prev_row_button"
-                android:text="Next" />
+                />
+             
+            <Button
+                android:id="@+id/prev_row_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="55dp"
+               />
 
           
 

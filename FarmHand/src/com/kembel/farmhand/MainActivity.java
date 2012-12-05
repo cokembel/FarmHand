@@ -46,6 +46,9 @@ public class MainActivity extends Activity {
         notDown = (Button)findViewById(R.id.not_down_button);
         next = (Button)findViewById(R.id.next_row_button);
         prev = (Button)findViewById(R.id.prev_row_button);
+        
+        next.setBackgroundResource(R.drawable.next_arrow);
+        prev.setBackgroundResource(R.drawable.prev_arrow);
     }
     
     private void setListeners() {
