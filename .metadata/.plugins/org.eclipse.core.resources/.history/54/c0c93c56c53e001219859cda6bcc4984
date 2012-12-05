@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">FarmHand</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="farm_name">Farm Name:</string>
+	<string name="status">Current State of Row:</string>
+    
+</resources>
