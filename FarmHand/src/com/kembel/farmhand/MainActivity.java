@@ -1,29 +1,22 @@
 package com.kembel.farmhand;
 
-import java.util.ArrayList;
-import java.util.TreeSet;
-
 import android.os.Bundle;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
-	private EditText farmName, rowNum;
+	private EditText farmName;
+	private NumberPicker rowNum;
 	private TextView status;
 	private Button down, notDown;
-	private Button prev, next;
 	
-    private int currentRowNum;
     private Farm farm;
     private State currentState;
     
@@ -32,7 +25,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        currentRowNum = 1;
         farm = new Farm();
         
         initializeFormComponents();
@@ -42,25 +34,29 @@ public class MainActivity extends Activity {
     private void initializeFormComponents() {
     	farmName = (EditText)findViewById(R.id.farm_name);
         status = (TextView)findViewById(R.id.current_status);
-        rowNum = (EditText)findViewById(R.id.row_number);
+        rowNum = (NumberPicker)findViewById(R.id.row_number);
 
         down = (Button)findViewById(R.id.down_button);
         notDown = (Button)findViewById(R.id.not_down_button);
-        next = (Button)findViewById(R.id.next_row_button);
-        prev = (Button)findViewById(R.id.prev_row_button);
         
-        next.setBackgroundResource(R.drawable.next_arrow);
-        prev.setBackgroundResource(R.drawable.prev_arrow);
+        rowNum.setMinValue(1);
+        rowNum.setMaxValue(1000);
+        rowNum.setWrapSelectorWheel(true);
+        rowNum.setOnValueChangedListener(onRowChange);
+        
     }
     
     private void setListeners() {
     	 down.setOnClickListener(onDown);
          notDown.setOnClickListener(onNotDown);
-         next.setOnClickListener(onNext);
-         prev.setOnClickListener(onPrev);
-         
-         rowNum.addTextChangedListener(onNumberChange);
     }
+    
+    private NumberPicker.OnValueChangeListener onRowChange = new NumberPicker.OnValueChangeListener() {
+		
+		public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+			updateRowDisplay(rowNum.getValue());			
+		}
+    };
     
     @Override
     public void onPause() {
@@ -73,87 +69,37 @@ public class MainActivity extends Activity {
         return true;
     }
     
-    private TextWatcher onNumberChange = new TextWatcher() {
-
-		public void afterTextChanged(Editable s) {
-			//Integer row = Integer.parseInt(rowNum.getText().toString());
-		//   if (row <= 0) {
-		
-		//	rowNum.setText(0);
-	//			return;
-		//	}
-		//	currentRowNum = row;
-			//updateRowDisplay();
-			
-		}
-
-		public void beforeTextChanged(CharSequence s, int start, int count,
-				int after) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		public void onTextChanged(CharSequence s, int start, int before,
-				int count) {
-			
-		}
-    	
-    };
     
     private View.OnClickListener onDown = new View.OnClickListener() {
     	
     	public void onClick(View v) {
-    		recordRowState(State.DOWN);
-    		updateRowDisplay();
+    		recordRowState(rowNum.getValue(), State.DOWN);
+    		updateRowDisplay(rowNum.getValue());
     	}
     };
     
     private View.OnClickListener onNotDown = new View.OnClickListener() {
 		
 		public void onClick(View v) {
-			recordRowState(State.NOT_DOWN);
-			updateRowDisplay();
+			recordRowState(rowNum.getValue(), State.NOT_DOWN);
+			updateRowDisplay(rowNum.getValue());
 		}
 		
 	};
 	
-	private View.OnClickListener onNext = new View.OnClickListener() {
-		
-		public void onClick(View v) {
-			currentRowNum++;
-			updateRowDisplay();
-		}
-		
-	};
-	
-	
-	private View.OnClickListener onPrev = new View.OnClickListener() {
-		
-		public void onClick(View v) {
-			if (currentRowNum == 1){
-				return;
-			}
-			
-			currentRowNum--;
-			updateRowDisplay();
-		}
-		
-	};
-	
-	private void recordRowState(State state) {
-		farm.insert(currentRowNum, state);
+	private void recordRowState(int currentRow, State state) {
+		farm.insert(currentRow, state);
 				
-		currentRowNum++;
-		rowNum.setText(String.valueOf(currentRowNum));
+		rowNum.setValue(++currentRow);
 	}
     
 	
-	private void updateRowDisplay() {
-		if (farm.contains(currentRowNum)) {
-			currentState = farm.getState(currentRowNum);
+	private void updateRowDisplay(int currentRow) {
+		if (farm.contains(currentRow)) {
+			currentState = farm.getState(currentRow);
 		} else {
 			currentState = State.NOT_SPECIFIED;
-			farm.insert(currentRowNum, currentState);
+			farm.insert(currentRow, currentState);
 		}
 		
 		if (currentState == State.DOWN) {
@@ -165,10 +111,8 @@ public class MainActivity extends Activity {
 		}
 		
 		// displays the appropriate row number and state
-		rowNum.setText(String.valueOf(currentRowNum));
 		status.setText(String.valueOf(currentState));
 	}
-
 	
 
     
