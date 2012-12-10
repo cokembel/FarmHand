@@ -1,0 +1,9 @@
+package com.kembel.farmhand;
+
+import android.*;
+
+public class EntryListLoader implements LoaderManager.LoaderCallbacks<Cursor>{
+	
+	SimpleCursorAdapter cursor;
+	
+}

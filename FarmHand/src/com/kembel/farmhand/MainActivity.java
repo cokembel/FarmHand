@@ -2,12 +2,14 @@ package com.kembel.farmhand;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -16,6 +18,7 @@ public class MainActivity extends Activity {
 	private NumberPicker rowNum;
 	private TextView status;
 	private Button down, notDown;
+	private Button viewRows;
 	
     private Farm farm;
     private State currentState;
@@ -29,6 +32,17 @@ public class MainActivity extends Activity {
         
         initializeFormComponents();
         setListeners();  
+        /*
+        TabHost.TabSpec spec=getTabHost().newTabSpec("tag1");
+        spec.setContent(R.id.restaurants);
+        spec.setIndicator("List", getResources()
+        .getDrawable(R.drawable.list));
+        getTabHost().addTab(spec);
+        spec=getTabHost().newTabSpec("tag2");
+        spec.setContent(R.id.details);
+        spec.setIndicator("Details", getResources()
+        .getDrawable(R.drawable.restaurant));
+        getTabHost().addTab(spec);*/
     }
     
     private void initializeFormComponents() {
@@ -38,6 +52,7 @@ public class MainActivity extends Activity {
 
         down = (Button)findViewById(R.id.down_button);
         notDown = (Button)findViewById(R.id.not_down_button);
+        viewRows = (Button)findViewById(R.id.view_rows);
         
         rowNum.setMinValue(1);
         rowNum.setMaxValue(1000);
@@ -49,6 +64,7 @@ public class MainActivity extends Activity {
     private void setListeners() {
     	 down.setOnClickListener(onDown);
          notDown.setOnClickListener(onNotDown);
+         viewRows.setOnClickListener(onViewRows);
     }
     
     private NumberPicker.OnValueChangeListener onRowChange = new NumberPicker.OnValueChangeListener() {
@@ -87,9 +103,17 @@ public class MainActivity extends Activity {
 		
 	};
 	
+	private View.OnClickListener onViewRows = new View.OnClickListener() {
+		
+		public void onClick(View v) {
+			Intent intent = new Intent(MainActivity.this, EntryList.class);
+			intent.putExtra("Farm", farm);
+			startActivity(intent);
+		}
+	};
+	
 	private void recordRowState(int currentRow, State state) {
-		farm.insert(currentRow, state);
-				
+		farm.insert(currentRow, state);		
 		rowNum.setValue(++currentRow);
 	}
     
@@ -113,6 +137,17 @@ public class MainActivity extends Activity {
 		// displays the appropriate row number and state
 		status.setText(String.valueOf(currentState));
 	}
+	/*
+	public static class FarmHolder {
+		private TextView name, numRows, date;
+		
+		FarmHolder(View entry) {
+			name = (TextView)entry.findViewById(R.id.entry_name);
+			numRows = (TextView)entry.findViewById(R.id.num_rows);
+			date = (TextView)entry.findViewById(R.id.entry_date);
+		}
+				
+	};*/
 	
 
     

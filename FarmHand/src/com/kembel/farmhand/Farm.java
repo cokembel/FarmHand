@@ -1,10 +1,14 @@
 package com.kembel.farmhand;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Farm {
+import android.os.Parcel;
+
+public class Farm implements Serializable {
 	
 	private ArrayList<State> rows;
+	private String name;
 	
 	public Farm() {
 		rows = new ArrayList<State>();
@@ -26,6 +30,10 @@ public class Farm {
 	}
 	
 	public State getState(int rowNumber) {
+		if (rows.size() == 0) {
+			return State.NOT_SPECIFIED;
+		}
+		
 		return rows.get(rowNumber - 1);
 	}
 	
@@ -35,5 +43,39 @@ public class Farm {
 		} else {
 			return false;
 		}
+	}
+
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void writeToParcel(Parcel dest, int flags) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public int getFirstRow() {
+		for (int i = 0; i < rows.size(); i++) {
+			if (rows.get(i) != State.NOT_SPECIFIED) {
+				return i +1;
+			}
+		}
+		
+		return 0;
+	}
+	
+	public int getLastRow() {
+		for (int i = rows.size() -1; i > 0; i--) {
+			if (rows.get(i) != State.NOT_SPECIFIED) {
+				return i +1;
+			}
+		}
+		
+		return 0;
+	}
+	
+	public int getSize() {
+		return getLastRow() - getFirstRow() + 1;
 	}
 }

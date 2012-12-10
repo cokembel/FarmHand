@@ -1,0 +1,17 @@
+package com.kembel.farmhand;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.widget.ListView;
+
+public class EntryList extends ListActivity{
+	ListView list;
+	
+	@Override
+	public onCreate(Bundle savedInstanceState) {
+		
+	}
+	
+	
+}
+
