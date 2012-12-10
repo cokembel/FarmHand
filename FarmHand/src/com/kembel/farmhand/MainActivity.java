@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -16,8 +18,8 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
-	private EditText farmName;
-	private TextView rowNum, status;
+	private EditText farmName, rowNum;
+	private TextView status;
 	private Button down, notDown;
 	private Button prev, next;
 	
@@ -40,7 +42,7 @@ public class MainActivity extends Activity {
     private void initializeFormComponents() {
     	farmName = (EditText)findViewById(R.id.farm_name);
         status = (TextView)findViewById(R.id.current_status);
-        rowNum = (TextView)findViewById(R.id.row_number);
+        rowNum = (EditText)findViewById(R.id.row_number);
 
         down = (Button)findViewById(R.id.down_button);
         notDown = (Button)findViewById(R.id.not_down_button);
@@ -56,6 +58,8 @@ public class MainActivity extends Activity {
          notDown.setOnClickListener(onNotDown);
          next.setOnClickListener(onNext);
          prev.setOnClickListener(onPrev);
+         
+         rowNum.addTextChangedListener(onNumberChange);
     }
     
     @Override
@@ -68,6 +72,33 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
+    
+    private TextWatcher onNumberChange = new TextWatcher() {
+
+		public void afterTextChanged(Editable s) {
+			//Integer row = Integer.parseInt(rowNum.getText().toString());
+		//   if (row <= 0) {
+		
+		//	rowNum.setText(0);
+	//			return;
+		//	}
+		//	currentRowNum = row;
+			//updateRowDisplay();
+			
+		}
+
+		public void beforeTextChanged(CharSequence s, int start, int count,
+				int after) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void onTextChanged(CharSequence s, int start, int before,
+				int count) {
+			
+		}
+    	
+    };
     
     private View.OnClickListener onDown = new View.OnClickListener() {
     	

@@ -10,14 +10,17 @@ public class Farm {
 		rows = new ArrayList<State>();
 	}
 	
-    // precondition: rowNumber must be no greater than size +1
-	// so that the indices of rows arraylist will match with
-	// row numbers (with a difference of 1 for the offset)
 	public void insert(int rowNumber, State state) {
+		if( rowNumber < 1){
+			return;
+		}
 		// replaces if already exists
 		if (contains(rowNumber)) {
 			rows.set(rowNumber - 1, state);
 		} else {
+			while(rows.size() != rowNumber -1) {
+				rows.add(State.NOT_SPECIFIED);
+			}
 			rows.add(state);
 		}
 	}
