@@ -114,15 +114,17 @@ public class DataCollecting extends Activity {
 			String name = String.valueOf(farmName.getText());
 			farm.setName(name);
 		
-		//	if (name == null) {
-				Toast.makeText(DataCollecting.this, farm.getName() + farm.getSize(), Toast.LENGTH_LONG).show();
-		//	} else {
+			if (index == -1) {
 		
 				FarmList.farms.add(farm);
-				FarmList.farmAdapter.notifyDataSetChanged();
-				finish();
-		//	}
-		}//
+			
+			} else {
+				FarmList.farms.set(index,farm);
+			}
+			
+			FarmList.farmAdapter.notifyDataSetChanged();
+			finish();
+		}
 		
 	};
 	
