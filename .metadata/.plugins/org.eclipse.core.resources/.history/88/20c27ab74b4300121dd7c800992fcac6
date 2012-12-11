@@ -1,0 +1,47 @@
+package com.kembel.farmhand;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+public class FarmListAdapter extends ArrayAdapter {
+	
+	private Context contxt;
+	private List<String> farms;
+	
+	public FarmListAdapter(Context ctxt, int textViewResourceId, List objects) {
+		super(ctxt, textViewResourceId, objects);
+	}
+
+	private Context context;
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		
+		View itemView;
+		
+		if (convertView == null) {
+		
+			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			
+			//View itemView = LayoutInflater.from(context).inflate(R.layout.farm_list_item, parent, false);
+			itemView = inflater.inflate(R.layout.farm_list_item, parent, false);
+			
+			TextView name = (TextView)itemView.findViewById(R.id.name);
+			TextView rowNum = (TextView)itemView.findViewById(R.id.row_number);
+			TextView date = (TextView)itemView.findViewById(R.id.date);
+		
+		} else {
+			itemView = (View) convertView;
+		}
+		
+		return itemView;
+	}
+
+}

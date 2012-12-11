@@ -1,0 +1,7 @@
+package com.kembel.farmhand;
+
+import android.app.TabActivity;
+
+public class TabsActivity extends TabActivity {
+
+}

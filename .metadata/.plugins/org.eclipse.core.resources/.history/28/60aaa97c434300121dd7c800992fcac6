@@ -1,0 +1,18 @@
+package com.kembel.farmhand;
+
+import java.util.ArrayList;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+public class FarmListAdapter extends ArrayAdapter {
+	
+	private Context context;
+
+	
+	public FarmListAdapter(Context context) {
+		this.context = context;
+		
+	}
+
+}
