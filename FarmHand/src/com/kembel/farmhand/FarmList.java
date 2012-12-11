@@ -24,11 +24,10 @@ import android.widget.Toast;
 
 public class FarmList extends ListActivity {
 	
-	private ListView listView;
 	public static FarmListAdapter farmAdapter; 
 	public static ArrayList<Farm> farms = new ArrayList<Farm>();
+	private ListView listView;
 
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		//farms = FarmHelper.readFarms();
@@ -53,7 +52,7 @@ public class FarmList extends ListActivity {
 				      .show();
 			Intent intent = new Intent(FarmList.this, DataCollecting.class);
 			intent.putExtra("newFarm", false);
-			intent.putExtra("Farm", position);
+			intent.putExtra("index", position);
 			startActivity(intent);			
 		}
 		

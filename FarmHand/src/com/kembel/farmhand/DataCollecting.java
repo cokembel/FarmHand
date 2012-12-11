@@ -24,6 +24,7 @@ public class DataCollecting extends Activity {
 	private Button save;
 	
     private Farm farm;
+    private int index;
     private State currentState;
     
     @Override
@@ -31,12 +32,23 @@ public class DataCollecting extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.data_collecting);
         
-      //  boolean newFarm = getIntent().getExtra("newFarm");
+        boolean newFarm = getIntent().getExtras().getBoolean("newFarm");
         	
-      
-        farm = new Farm();
-        
+        if (newFarm) {
+        	Toast.makeText(DataCollecting.this, "hello", Toast.LENGTH_LONG).show();
+        	farm = new Farm();
+        	index = -1;
+        } else {
+
+        	index = getIntent().getExtras().getInt("index");
+        	farm = FarmList.farms.get(index);
+        	
+        	//Toast.makeText(DataCollecting.this, farm.getName(), Toast.LENGTH_LONG).show();
+
+        }
+              
         initializeFormComponents();
+        setFormComponents();
         setListeners();  
     }
     
@@ -53,7 +65,14 @@ public class DataCollecting extends Activity {
         rowNum.setMaxValue(1000);
         rowNum.setWrapSelectorWheel(true);
         rowNum.setOnValueChangedListener(onRowChange);
-        
+    }
+    
+    private void setFormComponents() {
+    	// if a saved entry
+    	if (index != -1) {
+    		farmName.setText(farm.getName());
+    		rowNum.setValue(farm.getFirstRow());
+    	}	
     }
     
     private void setListeners() {
