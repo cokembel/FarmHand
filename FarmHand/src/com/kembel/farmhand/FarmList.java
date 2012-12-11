@@ -20,7 +20,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class FarmList extends ListActivity {
 	
@@ -30,12 +29,10 @@ public class FarmList extends ListActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		//farms = FarmHelper.readFarms();
-		
 		super.onCreate(savedInstanceState);
-		
 		setContentView(R.layout.entry_list);
 				
+		FarmHelper.readFarms();
 		listView = (ListView) findViewById(android.R.id.list);
 		
 		farmAdapter = new FarmListAdapter();
@@ -43,13 +40,22 @@ public class FarmList extends ListActivity {
 		listView.setAdapter(farmAdapter);
 		listView.setOnItemClickListener(onItemClick);
 	}
+	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		try {
+			FarmHelper.writeFarms();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	private OnItemClickListener onItemClick = new OnItemClickListener() {
 
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			Toast.makeText(getApplicationContext(),
-				      farms.get(position).getName() + position, Toast.LENGTH_LONG)
-				      .show();
 			Intent intent = new Intent(FarmList.this, DataCollecting.class);
 			intent.putExtra("newFarm", false);
 			intent.putExtra("index", position);
@@ -57,12 +63,6 @@ public class FarmList extends ListActivity {
 		}
 		
 	};
-	
-	@Override
-	public void onResume() {
-		super.onResume();
-			//farms = FarmHelper.readFarms();
-	}
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -105,7 +105,6 @@ public class FarmList extends ListActivity {
 			
 			TextView name = (TextView)view.findViewById(R.id.name);
 			TextView numberOfRows = (TextView)view.findViewById(R.id.row_number);
-			TextView date = (TextView)view.findViewById(R.id.date);
 
 			name.setText(String.valueOf(farms.get(position).getName()));
 			numberOfRows.setText(String.valueOf(farms.get(position).getSize()));

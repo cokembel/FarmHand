@@ -33,7 +33,6 @@ public final class R {
     public static final class id {
         public static final int add=0x7f080015;
         public static final int current_status=0x7f080002;
-        public static final int date=0x7f080009;
         public static final int down_button=0x7f080007;
         public static final int edit=0x7f080016;
         public static final int farm_label=0x7f080001;
@@ -47,6 +46,7 @@ public final class R {
         public static final int name=0x7f080008;
         public static final int not_down_button=0x7f080004;
         public static final int row_grid=0x7f080013;
+        public static final int row_label=0x7f080009;
         public static final int row_number=0x7f080005;
         public static final int save=0x7f080006;
         public static final int status_label=0x7f080003;

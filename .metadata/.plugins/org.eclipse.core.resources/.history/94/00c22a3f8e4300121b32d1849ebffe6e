@@ -1,0 +1,78 @@
+package com.kembel.farmhand;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OptionalDataException;
+import java.io.OutputStream;
+import java.io.StreamCorruptedException;
+import java.util.ArrayList;
+
+import android.content.Context;
+
+
+public class FarmHelper {
+	
+	private final static String FILE_NAME = "farmhand.txt";
+		
+	private FarmHelper() {}
+	
+	public static void writeFarms() throws FileNotFoundException, IOException {
+			ObjectOutputStream outputStream;
+			outputStream = new ObjectOutputStream(new FileOutputStream(FILE_NAME));
+			for (Farm farm : FarmList.farms) {
+				outputStream.writeObject(farm);
+			}
+			outputStream.flush();
+			outputStream.close();
+	}
+	
+	public static void readFarms() {
+		File file = new File(FILE_NAME);
+		if (!file.exists()) {
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+		
+			ObjectInputStream inputStream = null;
+			try {
+				inputStream = new ObjectInputStream(new FileInputStream(FILE_NAME));
+			} catch (StreamCorruptedException e) {
+				e.printStackTrace();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			Farm farm = new Farm();
+			
+			try {
+				while ((farm = (Farm) inputStream.readObject()) != null) {
+					FarmList.farms.add(farm);
+				}
+				
+			} catch (OptionalDataException e) {
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			try {
+				inputStream.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

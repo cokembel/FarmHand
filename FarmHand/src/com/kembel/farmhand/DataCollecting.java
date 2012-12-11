@@ -11,9 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
-import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class DataCollecting extends Activity {
 	
@@ -35,7 +33,6 @@ public class DataCollecting extends Activity {
         boolean newFarm = getIntent().getExtras().getBoolean("newFarm");
         	
         if (newFarm) {
-        	Toast.makeText(DataCollecting.this, "hello", Toast.LENGTH_LONG).show();
         	farm = new Farm();
         	index = -1;
         } else {
