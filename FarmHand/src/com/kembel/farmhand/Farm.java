@@ -12,6 +12,7 @@ public class Farm implements Serializable {
 	
 	public Farm() {
 		rows = new ArrayList<State>();
+		name = " ";
 	}
 	
 	public void insert(int rowNumber, State state) {
@@ -77,5 +78,9 @@ public class Farm implements Serializable {
 	
 	public int getSize() {
 		return getLastRow() - getFirstRow() + 1;
+	}
+	
+	public String getName() {
+		return name;
 	}
 }

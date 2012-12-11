@@ -11,13 +11,14 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class EntryList extends Activity{
 	
 	private Farm farm;
-	private ListView list;
 	private ArrayAdapter<String> farmAdapter;
+	private TextView farmName, firstRow, lastRow;
 
 	
 	@Override
@@ -26,6 +27,14 @@ public class EntryList extends Activity{
 		setContentView(R.layout.view_farm);
 		
 		farm = (Farm) getIntent().getSerializableExtra("Farm");
+		
+		farmName = (TextView) findViewById(R.id.farm_name);
+		firstRow = (TextView) findViewById(R.id.first_row_number);
+		lastRow = (TextView) findViewById(R.id.last_row_number);
+		
+		farmName.setText(String.valueOf(farm.getName()));
+		firstRow.setText(String.valueOf(farm.getFirstRow()));
+		lastRow.setText(String.valueOf(farm.getLastRow()));
 	
 		GridView rowsGrid = (GridView)findViewById(R.id.row_grid);
 		rowsGrid.setAdapter(new ImageAdapter(this,farm));
@@ -36,7 +45,7 @@ public class EntryList extends Activity{
 	private OnItemClickListener onGridItemClick = new OnItemClickListener() {
 
 		public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
-			Toast.makeText(EntryList.this, "" + position++ + ": " + farm.getState(position), Toast.LENGTH_SHORT).show();
+			Toast.makeText(EntryList.this, "" + ++position + ": " + farm.getState(position), Toast.LENGTH_SHORT).show();
 		}
 		
 	};

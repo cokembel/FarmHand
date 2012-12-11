@@ -17,7 +17,7 @@
 	                android:text="Farm Name:" />
 
 	            <TextView
-	                android:id="@+id/textView2"
+	                android:id="@+id/farm_name"
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:paddingLeft="10dp"
@@ -69,7 +69,6 @@
 	                android:layout_height="wrap_content"
 	                android:text="1000"
 	                android:textAppearance="?android:attr/textAppearanceLarge" />
-	
 	        </TableRow>
 
 	        <GridView
@@ -77,7 +76,7 @@
 	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
 	            android:padding="10dp"
-	            android:numColumns="3" >
+	            android:numColumns="7" >
 	          
 	        </GridView>	     	    
     </TableLayout>   
