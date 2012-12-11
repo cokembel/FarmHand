@@ -54,7 +54,8 @@ public class FarmList extends ListActivity {
 			Intent intent = new Intent(FarmList.this, DataCollecting.class);
 			intent.putExtra("newFarm", false);
 			intent.putExtra("Farm", position);
-			startActivity(intent);			
+			startActivity(intent);
+			
 		}
 		
 	};

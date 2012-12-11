@@ -9,7 +9,7 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No Name"
+            android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 		<LinearLayout
             android:layout_width="fill_parent"
@@ -20,14 +20,14 @@
 			    android:id="@+id/row_number"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
-			    android:text="NA"
+			    android:text="Small Text"
 			    android:textAppearance="?android:attr/textAppearanceSmall" />
 
 			<TextView
 			    android:id="@+id/date"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
-			    android:text=""
+			    android:text="Small Text"
 			    android:textAppearance="?android:attr/textAppearanceSmall" />
         
         </LinearLayout>

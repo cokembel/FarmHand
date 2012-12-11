@@ -49,12 +49,8 @@ public class FarmList extends ListActivity {
 
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 			Toast.makeText(getApplicationContext(),
-				      farms.get(position).getName() + position, Toast.LENGTH_LONG)
-				      .show();
-			Intent intent = new Intent(FarmList.this, DataCollecting.class);
-			intent.putExtra("newFarm", false);
-			intent.putExtra("Farm", position);
-			startActivity(intent);			
+				      "Click ListItem Number " + position, Toast.LENGTH_LONG)
+				      .show();			
 		}
 		
 	};
@@ -77,6 +73,7 @@ public class FarmList extends ListActivity {
 		if (item.getItemId() == R.id.add) {
 			Intent intent = new Intent(FarmList.this, DataCollecting.class);
 			intent.putExtra("newFarm", true);
+			intent.putExtra("Farm", new Farm());
 			startActivity(intent);
 		}
 		
@@ -86,6 +83,7 @@ public class FarmList extends ListActivity {
 	public class FarmListAdapter extends ArrayAdapter<Farm> {
 		
 		private Context context;
+		//public static final ArrayList<Farm> farms = new ArrayList<Farm>();
 		
 		@SuppressWarnings("unchecked")
 		public FarmListAdapter() {
@@ -100,16 +98,25 @@ public class FarmList extends ListActivity {
 		public View getView(int position, View convertView, ViewGroup parent) {	
 
 			View view;
-	
-			LayoutInflater inflater = getLayoutInflater();
-			view = inflater.inflate(R.layout.farm_list_item, null);
 			
-			TextView name = (TextView)view.findViewById(R.id.name);
-			TextView numberOfRows = (TextView)view.findViewById(R.id.row_number);
-			TextView date = (TextView)view.findViewById(R.id.date);
+			if (convertView == null) {
+				LayoutInflater inflater = getLayoutInflater();
+				
+				view = inflater.inflate(R.layout.farm_list_item, null);
+				
+				TextView name = (TextView)view.findViewById(R.id.name);
+				TextView numberOfRows = (TextView)view.findViewById(R.id.row_number);
+				TextView date = (TextView)view.findViewById(R.id.date);
 
-			name.setText(String.valueOf(farms.get(position).getName()));
-			numberOfRows.setText(String.valueOf(farms.get(position).getSize()));
+			
+				name.setText(String.valueOf(farms.get(position).getName()));
+				numberOfRows.setText(String.valueOf(farms.get(position).getSize()));
+
+				
+			} else {
+				view = convertView;
+				//itemView = (View) convertView;
+			}
 			
 			return view;
 		}

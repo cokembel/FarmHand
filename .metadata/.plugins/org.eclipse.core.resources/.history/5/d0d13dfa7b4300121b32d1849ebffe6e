@@ -33,11 +33,23 @@ public class DataCollecting extends Activity {
         
       //  boolean newFarm = getIntent().getExtra("newFarm");
         	
-      
+        
+        
         farm = new Farm();
         
         initializeFormComponents();
         setListeners();  
+        /*
+        TabHost.TabSpec spec=getTabHost().newTabSpec("tag1");
+        spec.setContent(R.id.restaurants);
+        spec.setIndicator("List", getResources()
+        .getDrawable(R.drawable.list));
+        getTabHost().addTab(spec);
+        spec=getTabHost().newTabSpec("tag2");
+        spec.setContent(R.id.details);
+        spec.setIndicator("Details", getResources()
+        .getDrawable(R.drawable.restaurant));
+        getTabHost().addTab(spec);*/
     }
     
     private void initializeFormComponents() {
@@ -70,6 +82,11 @@ public class DataCollecting extends Activity {
 		
     };
     
+    @Override
+    public void onPause() {
+    	super.onPause();
+    }   
+    
     private View.OnClickListener onDown = new View.OnClickListener() {
     	
     	public void onClick(View v) {
@@ -93,17 +110,16 @@ public class DataCollecting extends Activity {
 		public void onClick(View v) {
 			
 			String name = String.valueOf(farmName.getText());
-			farm.setName(name);
-		
-		//	if (name == null) {
-				Toast.makeText(DataCollecting.this, farm.getName() + farm.getSize(), Toast.LENGTH_LONG).show();
-		//	} else {
-		
+			
+			if (name == null) {
+				Toast.makeText(DataCollecting.this, "Please Enter Farm Name.", Toast.LENGTH_LONG).show();
+			} else {
+				farm.setName(name);
 				FarmList.farms.add(farm);
 				FarmList.farmAdapter.notifyDataSetChanged();
 				finish();
-		//	}
-		}//
+			}
+		}
 		
 	};
 	

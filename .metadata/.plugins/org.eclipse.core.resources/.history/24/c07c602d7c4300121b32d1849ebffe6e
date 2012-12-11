@@ -93,17 +93,16 @@ public class DataCollecting extends Activity {
 		public void onClick(View v) {
 			
 			String name = String.valueOf(farmName.getText());
-			farm.setName(name);
-		
-		//	if (name == null) {
-				Toast.makeText(DataCollecting.this, farm.getName() + farm.getSize(), Toast.LENGTH_LONG).show();
-		//	} else {
-		
+			
+			if (name == null) {
+				Toast.makeText(DataCollecting.this, "Please Enter Farm Name.", Toast.LENGTH_LONG).show();
+			} else {
+				farm.setName(name);
 				FarmList.farms.add(farm);
 				FarmList.farmAdapter.notifyDataSetChanged();
 				finish();
-		//	}
-		}//
+			}
+		}
 		
 	};
 	

@@ -18,7 +18,9 @@ public class FarmHelper {
 	
 	public static ArrayList<Farm> farms = new ArrayList<Farm>();
 	
-	private FarmHelper() {}
+	private FarmHelper() {
+		
+	}
 	
 	public static void writeFarm(Farm farm) throws FileNotFoundException, IOException {
 			ObjectOutputStream outputStream;

@@ -52,9 +52,10 @@ public class FarmList extends ListActivity {
 				      farms.get(position).getName() + position, Toast.LENGTH_LONG)
 				      .show();
 			Intent intent = new Intent(FarmList.this, DataCollecting.class);
-			intent.putExtra("newFarm", false);
-			intent.putExtra("Farm", position);
-			startActivity(intent);			
+			intent.putExtra("newFarm", true);
+			intent.putExtra("Farm", farms.get(position));
+			startActivity(intent);
+			
 		}
 		
 	};
