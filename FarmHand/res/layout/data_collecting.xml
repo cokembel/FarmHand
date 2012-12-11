@@ -83,16 +83,6 @@
                 android:layout_toRightOf="@+id/row_number"
                 android:text="Down" />
 
-            <Button
-                android:id="@+id/view_rows"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/down_button"
-                android:layout_alignRight="@+id/farm_name"
-                android:layout_alignTop="@+id/row_number"
-                android:layout_marginTop="30dp"
-                android:text="View Rows" />
-
         </RelativeLayout>
        
     </ScrollView>

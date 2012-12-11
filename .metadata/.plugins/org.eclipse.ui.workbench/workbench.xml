@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="43" version="2.0">
+<workbench progressCount="33" version="2.0">
 <workbenchAdvisor/>
-<window height="1100" width="1545" x="220" y="150">
+<window height="1100" maximized="true" width="1545" x="156" y="-21">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -30,7 +30,7 @@
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1354011546804" focus="true" label="Workspace - Java">
 <editors>
-<editorArea activeWorkbook="DefaultEditorWorkbook">
+<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@62eb3ad6">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -40,60 +40,49 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.internal.EditorStack@62eb3ad6" ratio="0.42333335" ratioLeft="508" ratioRight="692" relationship="2" relative="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" partName="strings.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/values/strings.xml" title="strings.xml" tooltip="FarmHand/res/values/strings.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/values/strings.xml"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="borders.xml" partName="borders.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/drawable-mdpi/borders.xml" title="borders.xml" tooltip="FarmHand/res/drawable-mdpi/borders.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/drawable-mdpi/borders.xml"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="colors.xml" partName="colors.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/values/colors.xml" title="colors.xml" tooltip="FarmHand/res/values/colors.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/values/colors.xml"/>
-</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Farm.java" partName="Farm.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/Farm.java" title="Farm.java" tooltip="FarmHand/src/com/kembel/farmhand/Farm.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/Farm.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1608" selectionTopPixel="495"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Row.java" partName="Row.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/Row.java" title="Row.java" tooltip="FarmHand/src/com/kembel/farmhand/Row.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/Row.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="633" selectionTopPixel="0"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="styles.xml" partName="styles.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/values/styles.xml" title="styles.xml" tooltip="FarmHand/res/values/styles.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/values/styles.xml"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataCollecting.java" partName="DataCollecting.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/DataCollecting.java" title="DataCollecting.java" tooltip="FarmHand/src/com/kembel/farmhand/DataCollecting.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/DataCollecting.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2134" selectionTopPixel="450"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" partName="activity_main.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/layout/activity_main.xml" title="activity_main.xml" tooltip="FarmHand/res/layout/activity_main.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/layout/activity_main.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="585" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RowAdapter.java" partName="RowAdapter.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/RowAdapter.java" title="RowAdapter.java" tooltip="FarmHand/src/com/kembel/farmhand/RowAdapter.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/RowAdapter.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="713" selectionTopPixel="0"/>
 </editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="entry_list.xml" partName="entry_list.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/layout/entry_list.xml" title="entry_list.xml" tooltip="FarmHand/res/layout/entry_list.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/layout/entry_list.xml"/>
-</editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="grid_item.xml" partName="grid_item.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/layout/grid_item.xml" title="grid_item.xml" tooltip="FarmHand/res/layout/grid_item.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/layout/grid_item.xml"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FarmList.java" partName="FarmList.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/FarmList.java" title="FarmList.java" tooltip="FarmHand/src/com/kembel/farmhand/FarmList.java" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FarmList.java" partName="FarmList.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/FarmList.java" title="FarmList.java" tooltip="FarmHand/src/com/kembel/farmhand/FarmList.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/FarmList.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="759" selectionTopPixel="120"/>
+<editorState selectionHorizontalPixel="0" selectionLength="513" selectionOffset="1516" selectionTopPixel="0"/>
 </editor>
-<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="data_collecting.xml" partName="data_collecting.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/layout/data_collecting.xml" title="data_collecting.xml" tooltip="FarmHand/res/layout/data_collecting.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/layout/data_collecting.xml"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FarmHelper.java" partName="FarmHelper.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/FarmHelper.java" title="FarmHelper.java" tooltip="FarmHand/src/com/kembel/farmhand/FarmHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/FarmHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="947" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FarmListAdapter.java" partName="FarmListAdapter.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/FarmListAdapter.java" title="FarmListAdapter.java" tooltip="FarmHand/src/com/kembel/farmhand/FarmListAdapter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/FarmListAdapter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="399" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ViewEntry.java" partName="ViewEntry.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/ViewEntry.java" title="ViewEntry.java" tooltip="FarmHand/src/com/kembel/farmhand/ViewEntry.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/ViewEntry.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1218" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataCollecting.java" partName="DataCollecting.java" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/src/com/kembel/farmhand/DataCollecting.java" title="DataCollecting.java" tooltip="FarmHand/src/com/kembel/farmhand/DataCollecting.java" workbook="org.eclipse.ui.internal.EditorStack@62eb3ad6">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/src/com/kembel/farmhand/DataCollecting.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4795" selectionTopPixel="1781"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="options.xml" partName="options.xml" path="C:/Users/Cole/Documents/GitHub/FarmHand/FarmHand/res/menu/options.xml" title="options.xml" tooltip="FarmHand/res/menu/options.xml" workbook="org.eclipse.ui.internal.EditorStack@62eb3ad6">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/FarmHand/res/menu/options.xml"/>
 </editor>
 </editors>
 <views>
@@ -103,9 +92,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (33 items)"/>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (24 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -155,7 +143,7 @@
 </view>
 </views>
 <perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
@@ -221,15 +209,27 @@
 <perspective_action id="com.android.ide.eclipse.hierarchyviewer.TreeViewPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars>
+<fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@6f4641a" orientation="512" selectedTabId="org.eclipse.jdt.ui.PackageExplorer" style="1">
+<fastViews>
+<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
 <fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="com.android.ide.eclipse.ddms.views.LogCatView" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.ProblemView" ratio="0.29946524"/>
 <view id="org.eclipse.jdt.ui.JavadocView" ratio="0.29839572"/>
 <view id="org.eclipse.jdt.ui.SourceView" ratio="0.29946524"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@4bf712d" orientation="256" selectedTabId="com.android.ide.eclipse.ddms.views.LogCatView" style="1">
+<fastViews>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@3e7c0e92" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -247,19 +247,15 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@4bf712d" ratio="0.9688841" ratioLeft="903" ratioRight="29" relationship="4" relative="left">
-<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@3e7c0e92" ratio="0.96522784" ratioLeft="805" ratioRight="29" relationship="4" relative="left">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
@@ -300,11 +296,9 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@6f4641a" ratio="0.25" ratioLeft="478" ratioRight="1434" relationship="2" relative="org.eclipse.ui.internal.ViewStack@6dd41264">
-<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.16500786" ratioLeft="315" ratioRight="1594" relationship="2" relative="org.eclipse.ui.internal.ViewStack@6f4641a"/>
@@ -316,152 +310,155 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/FarmList.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/FarmListAdapter.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/RowAdapter.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/FarmHand/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/FarmHand/res/layout/options.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/FarmHand/res/menu/options.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/FarmHand/res/menu/options.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/ViewEntry.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/MainActivity.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/DataCollecting.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/FarmHand/res/layout/data_collecting.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/Farm.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/FarmHelper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/FarmList.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/FarmHand/res/layout/data_collecting.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/FarmHand/src/com/kembel/farmhand/ViewEntry.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/FarmHand/res/menu/Data_collecting_options.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/FarmHand/res/menu/options.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/FarmHand/res/menu/data_collecting_options.xml"/>
 </editors>
-<item historyLabel="FarmListAdapter.java" index="1">
-<position info="not_deleted" x="1025" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="1667" y="0"/>
 </item>
-<item historyLabel="FarmHand Manifest" index="3"/>
-<item historyLabel="options.xml" index="4"/>
-<item historyLabel="options.xml" index="5">
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="908" y="0"/>
+</item>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1506" y="0"/>
+</item>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="1667" y="0"/>
+</item>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="909" y="0"/>
+</item>
+<item historyLabel="FarmHelper.java" index="2">
 <position/>
 </item>
-<item historyLabel="options.xml" index="6"/>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1248" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1341" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="541" y="0"/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1369" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="544" y="0"/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1399" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="543" y="0"/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1753" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="570" y="0"/>
 </item>
-<item historyLabel="options.xml" index="6"/>
-<item historyLabel="FarmListAdapter.java" index="1">
-<position info="not_deleted" x="1025" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="668" y="0"/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1422" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1506" y="0"/>
 </item>
-<item historyLabel="FarmListAdapter.java" index="1">
-<position info="not_deleted" x="671" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1356" y="0"/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1282" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="577" y="0"/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1520" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1749" y="0"/>
+<item historyLabel="FarmHelper.java" index="2">
+<position info="not_deleted" x="947" y="0"/>
 </item>
-<item historyLabel="options.xml" index="6"/>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1753" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="815" y="0"/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1695" y="0"/>
+<item historyLabel="data_collecting.xml" index="4"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="815" y="0"/>
 </item>
-<item historyLabel="RowAdapter.java" index="2">
-<position info="not_deleted" x="715" y="0"/>
+<item historyLabel="Farm.java" index="1">
+<position info="not_deleted" x="585" y="0"/>
 </item>
-<item historyLabel="ViewEntry.java" index="7">
-<position info="not_deleted" x="1627" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="815" y="0"/>
 </item>
-<item historyLabel="RowAdapter.java" index="2">
-<position info="not_deleted" x="713" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="3569" y="30"/>
 </item>
-<item historyLabel="MainActivity.java" index="8">
-<position info="not_deleted" x="2816" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="815" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="2561" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1892" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="3883" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1898" y="0"/>
 </item>
-<item historyLabel="ViewEntry.java" index="7">
-<position info="not_deleted" x="1627" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1884" y="0"/>
 </item>
-<item historyLabel="FarmListAdapter.java" index="1">
-<position info="not_deleted" x="671" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="3569" y="30"/>
 </item>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="1700" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="178" y="0"/>
 </item>
-<item historyLabel="FarmHand Manifest" index="3"/>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="759" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1443" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="3883" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="931" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="3741" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1513" y="0"/>
 </item>
-<item historyLabel="data_collecting.xml" index="10"/>
-<item historyLabel="FarmList.java" index="0">
-<position info="not_deleted" x="759" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="1289" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="3741" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1513" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="3469" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="878" y="0"/>
 </item>
-<item historyLabel="Farm.java" index="11">
-<position info="not_deleted" x="298" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1431" y="0"/>
 </item>
-<item historyLabel="Farm.java" index="11">
-<position info="not_deleted" x="1633" y="0"/>
+<item historyLabel="ViewEntry.java" index="5">
+<position info="not_deleted" x="1045" y="0"/>
 </item>
-<item historyLabel="Farm.java" index="11">
-<position info="not_deleted" x="1608" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="910" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="3726" y="0"/>
+<item historyLabel="Data_collecting_options.xml" index="6"/>
+<item historyLabel="options.xml" index="7"/>
+<item historyLabel="Data_collecting_options.xml" index="6"/>
+<item historyLabel="ViewEntry.java" index="5">
+<position info="not_deleted" x="1218" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="3739" y="0"/>
+<item historyLabel="data_collecting_options.xml" index="8">
+<position info="not_deleted" x="211" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="3698" y="0"/>
+<item historyLabel="FarmList.java" index="3">
+<position info="not_deleted" x="1516" y="513"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="1811" y="0"/>
+<item historyLabel="Data_collecting_options.xml" index="6"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="910" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="1834" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="4774" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="642" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="4802" y="0"/>
 </item>
-<item historyLabel="FarmListAdapter.java" index="1">
-<position info="not_deleted" x="671" y="0"/>
+<item historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="4832" y="0"/>
 </item>
-<item historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="642" y="0"/>
-</item>
-<item historyLabel="options.xml" index="4"/>
-<item active="true" historyLabel="DataCollecting.java" index="9">
-<position info="not_deleted" x="642" y="0"/>
+<item active="true" historyLabel="DataCollecting.java" index="0">
+<position info="not_deleted" x="4879" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -470,8 +467,8 @@
 <actionBarAdvisor/>
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@6f4641a"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@3e7c0e92"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@6dd41264"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -487,11 +484,23 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="data_collecting.xml" tooltip="FarmHand/res/layout/data_collecting.xml">
-<persistable path="/FarmHand/res/layout/data_collecting.xml"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="options.xml" tooltip="FarmHand/res/menu/options.xml">
 <persistable path="/FarmHand/res/menu/options.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="Data_collecting_options.xml" tooltip="FarmHand/res/menu/Data_collecting_options.xml">
+<persistable path="/FarmHand/res/menu/Data_collecting_options.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ViewEntry.java" tooltip="FarmHand/src/com/kembel/farmhand/ViewEntry.java">
+<persistable path="/FarmHand/src/com/kembel/farmhand/ViewEntry.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FarmListAdapter.java" tooltip="FarmHand/src/com/kembel/farmhand/FarmListAdapter.java">
+<persistable path="/FarmHand/src/com/kembel/farmhand/FarmListAdapter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FarmHelper.java" tooltip="FarmHand/src/com/kembel/farmhand/FarmHelper.java">
+<persistable path="/FarmHand/src/com/kembel/farmhand/FarmHelper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="data_collecting.xml" tooltip="FarmHand/res/layout/data_collecting.xml">
+<persistable path="/FarmHand/res/layout/data_collecting.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="options.xml" tooltip="FarmHand/res/layout/options.xml">
 <persistable path="/FarmHand/res/layout/options.xml"/>
@@ -504,9 +513,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="grid_item.xml" tooltip="FarmHand/res/layout/grid_item.xml">
 <persistable path="/FarmHand/res/layout/grid_item.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FarmListAdapter.java" tooltip="FarmHand/src/com/kembel/farmhand/FarmListAdapter.java">
-<persistable path="/FarmHand/src/com/kembel/farmhand/FarmListAdapter.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FarmList.java" tooltip="FarmHand/src/com/kembel/farmhand/FarmList.java">
 <persistable path="/FarmHand/src/com/kembel/farmhand/FarmList.java"/>
@@ -522,15 +528,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="viewFarm.xml" tooltip="FarmHand/res/layout/viewFarm.xml">
 <persistable path="/FarmHand/res/layout/viewFarm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="FarmHand/res/layout/activity_main.xml">
-<persistable path="/FarmHand/res/layout/activity_main.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="FarmHand/gen/com/kembel/farmhand/R.java">
-<persistable path="/FarmHand/gen/com/kembel/farmhand/R.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="String.class" tooltip="java.lang.String">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=FarmHand/C:\/Users\/Cole\/android-sdks\/platforms\/android-16\/android.jar&lt;java.lang(String.class"/>
 </file>
 </mruList>
 </workbench>

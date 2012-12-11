@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +21,7 @@ public class DataCollecting extends Activity {
 	private NumberPicker rowNum;
 	private TextView status;
 	private Button down, notDown;
-	private Button viewRows, save;
+	private Button save;
 	
     private Farm farm;
     private State currentState;
@@ -28,6 +30,10 @@ public class DataCollecting extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.data_collecting);
+        
+      //  boolean newFarm = getIntent().getExtra("newFarm");
+        	
+        
         
         farm = new Farm();
         
@@ -53,7 +59,6 @@ public class DataCollecting extends Activity {
 
         down = (Button)findViewById(R.id.down_button);
         notDown = (Button)findViewById(R.id.not_down_button);
-        viewRows = (Button)findViewById(R.id.view_rows);
         save = (Button)findViewById(R.id.save);
         
         rowNum.setMinValue(1);
@@ -66,7 +71,6 @@ public class DataCollecting extends Activity {
     private void setListeners() {
     	 down.setOnClickListener(onDown);
          notDown.setOnClickListener(onNotDown);
-         viewRows.setOnClickListener(onViewRows);
          save.setOnClickListener(onSave);
     }
     
@@ -81,14 +85,7 @@ public class DataCollecting extends Activity {
     @Override
     public void onPause() {
     	super.onPause();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
-    
+    }   
     
     private View.OnClickListener onDown = new View.OnClickListener() {
     	
@@ -108,16 +105,6 @@ public class DataCollecting extends Activity {
 		
 	};
 	
-	private View.OnClickListener onViewRows = new View.OnClickListener() {
-		
-		public void onClick(View v) {
-			Intent intent = new Intent(DataCollecting.this, ViewEntry.class);
-			intent.putExtra("Farm", farm);
-			startActivity(intent);
-		}
-		
-	};
-	
 	private View.OnClickListener onSave = new View.OnClickListener() {
 		
 		public void onClick(View v) {
@@ -128,6 +115,8 @@ public class DataCollecting extends Activity {
 				Toast.makeText(DataCollecting.this, "Please Enter Farm Name.", Toast.LENGTH_LONG).show();
 			} else {
 				farm.setName(name);
+				FarmList.farms.add(farm);
+				FarmList.farmAdapter.notifyDataSetChanged();
 				finish();
 			}
 		}
@@ -159,17 +148,24 @@ public class DataCollecting extends Activity {
 		// displays the appropriate row number and state
 		status.setText(String.valueOf(currentState));
 	}
-	/*
-	public static class FarmHolder {
-		private TextView name, numRows, date;
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		new MenuInflater(this).inflate(R.menu.data_collecting_options, menu);
 		
-		FarmHolder(View entry) {
-			name = (TextView)entry.findViewById(R.id.entry_name);
-			numRows = (TextView)entry.findViewById(R.id.num_rows);
-			date = (TextView)entry.findViewById(R.id.entry_date);
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (item.getItemId() == R.id.view) {
+			Intent intent = new Intent(DataCollecting.this, ViewEntry.class);
+			intent.putExtra("Farm", farm);
+			startActivity(intent);
 		}
-				
-	};*/
+		
+		return super.onOptionsItemSelected(item);
+	}
 	
 	
 

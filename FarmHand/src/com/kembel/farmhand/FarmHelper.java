@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.OptionalDataException;
 import java.io.OutputStream;
 import java.io.StreamCorruptedException;
 import java.util.ArrayList;
@@ -29,19 +30,39 @@ public class FarmHelper {
 			outputStream.close();
 	}
 	
-	public static ArrayList<Farm>  readFarms() throws StreamCorruptedException, FileNotFoundException, IOException, ClassNotFoundException {
+	public static ArrayList<Farm>  readFarms() {
 		farms.clear();
 		
-		ObjectInputStream inputStream;
-		inputStream = new ObjectInputStream(new FileInputStream(FILE_NAME));
-		
-		Farm farm;
-		
-		while ((farm = (Farm) inputStream.readObject()) != null) {
-			farms.add(farm);
+		ObjectInputStream inputStream = null;
+		try {
+			inputStream = new ObjectInputStream(new FileInputStream(FILE_NAME));
+		} catch (StreamCorruptedException e) {
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		
-		inputStream.close();
+		Farm farm = new Farm();
+		
+		try {
+			while ((farm = (Farm) inputStream.readObject()) != null) {
+				farms.add(farm);
+			}
+		} catch (OptionalDataException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			inputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		return farms;
 	}
