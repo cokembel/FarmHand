@@ -1,0 +1,39 @@
+package com.kembel.farmhand;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+
+
+public class FarmHelper {
+	
+	private final static String FILE_NAME = "com.kembel.farmhand.txt";
+	
+	public static ArrayList<Farm> farms;
+	
+	FarmHelper() {
+		farms = new ArrayList<Farm>();
+	}
+	
+	public void writeFarm(Farm farm) {
+		
+	}
+	
+	public void readFarms(Farm farm) {
+		try {
+			ObjectOutputStream outputStream;
+			outputStream = new ObjectOutputStream(new FileOutputStream(FILE_NAME));
+			
+			outputStream.writeObject(farm);
+			outputStream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+
+}

@@ -1,0 +1,15 @@
+package com.kembel.farmhand;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.*;
+
+public class FarmHelper extends SQLiteOpenHelper {
+	
+	private static final String DATABASE_NAME = "com.kembel.farmhand.db";
+	
+	public FarmHelper(Context context) {
+		
+	}
+
+}

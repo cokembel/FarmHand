@@ -12,7 +12,7 @@ public class Farm implements Serializable {
 	
 	public Farm() {
 		rows = new ArrayList<State>();
-		name = " ";
+		name = "";
 	}
 	
 	public void insert(int rowNumber, State state) {

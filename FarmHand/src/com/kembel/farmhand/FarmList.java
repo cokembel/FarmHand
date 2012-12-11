@@ -43,6 +43,11 @@ public class FarmList extends ListActivity {
 	};
 	
 	@Override
+	public void onResume() {
+		
+	}
+	
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		new MenuInflater(this).inflate(R.menu.options, menu);
 		

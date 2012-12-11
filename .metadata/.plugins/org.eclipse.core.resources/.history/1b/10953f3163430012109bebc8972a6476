@@ -1,0 +1,25 @@
+package com.kembel.farmhand;
+
+import java.util.ArrayList;
+
+
+public class FarmHelper {
+	
+	private final static String FILE_NAME = "com.kembel.farmhand.txt";
+	
+	public static ArrayList<Farm> farms;
+	
+	FarmHelper() {
+		farms = new ArrayList<Farm>();
+	}
+	
+	public void writeToFile(Farm farm) {
+		
+	}
+	
+	public void readFarms(Farm farm) {
+		FileOutputStream out = new FileOutputStream(FILE_NAME);
+	}
+
+
+}

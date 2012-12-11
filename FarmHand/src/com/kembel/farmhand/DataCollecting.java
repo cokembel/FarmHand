@@ -75,6 +75,7 @@ public class DataCollecting extends Activity {
 		public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
 			updateRowDisplay(rowNum.getValue());			
 		}
+		
     };
     
     @Override
@@ -95,6 +96,7 @@ public class DataCollecting extends Activity {
     		recordRowState(rowNum.getValue(), State.DOWN);
     		updateRowDisplay(rowNum.getValue());
     	}
+    	
     };
     
     private View.OnClickListener onNotDown = new View.OnClickListener() {
@@ -113,6 +115,7 @@ public class DataCollecting extends Activity {
 			intent.putExtra("Farm", farm);
 			startActivity(intent);
 		}
+		
 	};
 	
 	private View.OnClickListener onSave = new View.OnClickListener() {
@@ -123,10 +126,12 @@ public class DataCollecting extends Activity {
 			
 			if (name == null) {
 				Toast.makeText(DataCollecting.this, "Please Enter Farm Name.", Toast.LENGTH_LONG).show();
+			} else {
+				farm.setName(name);
+				finish();
 			}
-			farm.setName(name);
-			finish();
 		}
+		
 	};
 	
 	private void recordRowState(int currentRow, State state) {
