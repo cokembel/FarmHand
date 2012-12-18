@@ -12,9 +12,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DataCollecting extends Activity {
 	
+    public static int index;
+    
 	private EditText farmName;
 	private NumberPicker rowNum;
 	private TextView status;
@@ -22,7 +25,6 @@ public class DataCollecting extends Activity {
 	private Button save;
 	
     private Farm farm;
-    private int index;
     private State currentState;
     
     @Override
@@ -34,14 +36,13 @@ public class DataCollecting extends Activity {
         	
         if (newFarm) {
         	farm = new Farm();
-        	index = -1;
+			FarmList.farms.add(farm);
+			index = FarmList.farms.size() - 1;
         } else {
-
         	index = getIntent().getExtras().getInt("index");
         	farm = FarmList.farms.get(index);
         	
         	//Toast.makeText(DataCollecting.this, farm.getName(), Toast.LENGTH_LONG).show();
-
         }
               
         initializeFormComponents();
@@ -68,7 +69,11 @@ public class DataCollecting extends Activity {
     	// if a saved entry
     	if (index != -1) {
     		farmName.setText(farm.getName());
-    		rowNum.setValue(farm.getFirstRow());
+    		if (farm.getSize() == 0) {
+    			rowNum.setValue(1);
+    		} else {
+        		rowNum.setValue(farm.getFirstRow());
+    		}
     	}	
     }
     
@@ -104,6 +109,36 @@ public class DataCollecting extends Activity {
 		
 	};
 	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		String name = String.valueOf(farmName.getText());
+
+		if (name.trim().length() == 0) {
+        	Toast.makeText(DataCollecting.this, "hello", Toast.LENGTH_LONG).show();
+
+		}
+		farm.setName(name);
+	
+		if (farm.getName().trim().length() == 0) {
+			if (farm.getSize() == 0) {
+				// empty entry shouldn't be saved
+				// need to remove farm that was initially added in onCreate
+				FarmList.farms.remove(index);
+	        	Toast.makeText(DataCollecting.this, "Empty entry was not saved", Toast.LENGTH_LONG).show();	
+			} else {
+				Toast.makeText(DataCollecting.this, "Entry was saved with name: " + " foobar", Toast.LENGTH_LONG).show();
+			}
+	
+		} else {
+			FarmList.farms.set(index,farm);
+		}
+	
+		FarmList.farmAdapter.notifyDataSetChanged();
+		finish();
+		
+	}
+	
 	private View.OnClickListener onSave = new View.OnClickListener() {
 		
 		public void onClick(View v) {
@@ -111,13 +146,11 @@ public class DataCollecting extends Activity {
 			String name = String.valueOf(farmName.getText());
 			farm.setName(name);
 		
-			if (index == -1) {
-		
-				FarmList.farms.add(farm);
-			
-			} else {
+			//if (index == -1) {
+			//	FarmList.farms.add(farm);
+			//} else {
 				FarmList.farms.set(index,farm);
-			}
+			//}
 			
 			FarmList.farmAdapter.notifyDataSetChanged();
 			finish();
@@ -161,16 +194,16 @@ public class DataCollecting extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.view) {
+			
+			String name = String.valueOf(farmName.getText());
+			farm.setName(name);
+			
 			Intent intent = new Intent(DataCollecting.this, ViewEntry.class);
-			intent.putExtra("Farm", farm);
+			//intent.putExtra("Farm", farm);
 			startActivity(intent);
 		}
 		
 		return super.onOptionsItemSelected(item);
 	}
 	
-	
-
-    
-    
 }

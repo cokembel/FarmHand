@@ -1592,3 +1592,13 @@ org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 35; Attribute name "
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-12-17 21:25:44.517 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_06
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2012-12-17 21:26:17.044
+!MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 9501 milliseconds.

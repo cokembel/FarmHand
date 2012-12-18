@@ -57,24 +57,28 @@ public class Farm implements Serializable {
 	public int getFirstRow() {
 		for (int i = 0; i < rows.size(); i++) {
 			if (rows.get(i) != State.NOT_SPECIFIED) {
-				return i +1;
+				return i + 1;
 			}
 		}
 		
-		return 0;
+		return 1;
 	}
 	
 	public int getLastRow() {
 		for (int i = rows.size() -1; i > 0; i--) {
 			if (rows.get(i) != State.NOT_SPECIFIED) {
-				return i +1;
+				return i + 1;
 			}
 		}
 		
-		return 0;
+		return 1;
 	}
 	
 	public int getSize() {
+		if (rows.size() == 0) {
+			return 0;
+		}
+		
 		return getLastRow() - getFirstRow() + 1;
 	}
 	

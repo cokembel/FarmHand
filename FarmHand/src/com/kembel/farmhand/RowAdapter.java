@@ -1,7 +1,10 @@
 package com.kembel.farmhand;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
+import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +19,13 @@ public class RowAdapter extends BaseAdapter {
 	
 	private Context context;
 	private Farm farm;
+	private int index;
 	
-	public RowAdapter(Context context, Farm farm) {
+	public RowAdapter(Context context, int index) {
 		this.context = context;
-		this.farm = farm;
+		this.index = index;
+		
+		this.farm = FarmList.farms.get(index);
 	}
 
 	public int getCount() {
@@ -36,27 +42,62 @@ public class RowAdapter extends BaseAdapter {
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
-		Button rowImage;
+		Button rowButton;
 		
 		if (convertView == null) {
-			rowImage = new Button(context);
-			rowImage.setLayoutParams(new GridView.LayoutParams(85,85));
-			rowImage.setPadding(2,	2, 2, 2);
+			rowButton = new Button(context);
+			rowButton.setLayoutParams(new GridView.LayoutParams(85,85));
+			rowButton.setPadding(2,	2, 2, 2);
 		} else {
-			rowImage = (Button) convertView;
+			rowButton = (Button) convertView;
 		}
 		position += farm.getFirstRow();
-		rowImage.setText(String.valueOf(position));
+		rowButton.setText(String.valueOf(position));
 		
 		if (farm.getState(position) == State.DOWN) {
-			rowImage.setBackgroundResource(R.drawable.green_holo);
+			rowButton.setBackgroundResource(R.drawable.green_holo);
 		} else if (farm.getState(position) == State.NOT_DOWN) {
-			rowImage.setBackgroundResource(R.drawable.red_holo);
+			rowButton.setBackgroundResource(R.drawable.red_holo);
 		} else {
-			rowImage.setBackgroundResource(R.drawable.gray_ball);
+			rowButton.setBackgroundResource(R.drawable.gray_ball);
 		}
 		
-		return rowImage;
+		rowButton.setOnClickListener(onRowClick);
+		
+		return rowButton;
 	}
+	
+	private View.OnClickListener onRowClick = new View.OnClickListener() {
+
+		public void onClick(View v) {
+			
+			final Button rowButton = (Button) v;
+
+			new AlertDialog.Builder(context)
+				.setTitle("Change State")
+				.setPositiveButton("Down", new DialogInterface.OnClickListener() {
+					
+					public void onClick(DialogInterface dialog, int which) {
+						farm.insert(Integer.valueOf((String) rowButton.getText()),State.DOWN);
+						rowButton.setBackgroundResource(R.drawable.green_holo);
+						if (ViewEntry.farmAdapter != null) {
+							ViewEntry.farmAdapter.notifyDataSetChanged();
+						}
+					}
+				}).setNegativeButton("Not Down", new DialogInterface.OnClickListener() {
+					
+					public void onClick(DialogInterface dialog, int which) {
+						farm.insert(Integer.valueOf((String) rowButton.getText()),State.NOT_DOWN);
+						rowButton.setBackgroundResource(R.drawable.red_holo);
+
+						if (ViewEntry.farmAdapter != null) {
+							ViewEntry.farmAdapter.notifyDataSetChanged();	
+						}
+					}
+				}).setMessage(String.valueOf(rowButton.getText()))
+				.show();
+		}
+		
+	};
 
 }
