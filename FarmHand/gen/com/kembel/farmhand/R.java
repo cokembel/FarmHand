@@ -32,8 +32,9 @@ public final class R {
     }
     public static final class id {
         public static final int add=0x7f080015;
+        public static final int alarm_check=0x7f080007;
         public static final int current_status=0x7f080002;
-        public static final int down_button=0x7f080007;
+        public static final int down_button=0x7f080006;
         public static final int edit=0x7f080016;
         public static final int farm_label=0x7f080001;
         public static final int farm_name=0x7f080000;
@@ -48,7 +49,6 @@ public final class R {
         public static final int row_grid=0x7f080013;
         public static final int row_label=0x7f080009;
         public static final int row_number=0x7f080005;
-        public static final int save=0x7f080006;
         public static final int status_label=0x7f080003;
         public static final int tableRow1=0x7f08000c;
         public static final int tableRow2=0x7f08000d;
@@ -68,6 +68,7 @@ public final class R {
         public static final int view_entry_options=0x7f070002;
     }
     public static final class string {
+        public static final int alarm_label=0x7f050005;
         public static final int app_name=0x7f050000;
         public static final int farm_name=0x7f050003;
         public static final int menu_settings=0x7f050001;

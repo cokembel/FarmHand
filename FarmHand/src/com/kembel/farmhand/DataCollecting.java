@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ public class DataCollecting extends Activity {
 	private NumberPicker rowNum;
 	private TextView status;
 	private Button down, notDown;
+	private CheckBox alarmCheck;
 	
     private Farm farm;
     private State currentState;
@@ -78,6 +80,7 @@ public class DataCollecting extends Activity {
     	farmName = (EditText)findViewById(R.id.farm_name);
         status = (TextView)findViewById(R.id.current_status);
         rowNum = (NumberPicker)findViewById(R.id.row_number);
+        alarmCheck = (CheckBox)findViewById(R.id.alarm_check);
 
         down = (Button)findViewById(R.id.down_button);
         notDown = (Button)findViewById(R.id.not_down_button);

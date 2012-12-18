@@ -20,6 +20,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FarmList extends ListActivity {
 	
@@ -33,6 +34,11 @@ public class FarmList extends ListActivity {
 		setContentView(R.layout.entry_list);
 				
 		FarmHelper.readFarms();
+		
+		if (farms.size() == 0) {
+			Toast.makeText(FarmList.this, "Hit 'ADD' on the action bar to create a farm entry", Toast.LENGTH_SHORT).show();
+		}
+		
 		listView = (ListView) findViewById(android.R.id.list);
 		
 		farmAdapter = new FarmListAdapter();

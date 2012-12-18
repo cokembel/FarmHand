@@ -72,7 +72,7 @@ public class RowAdapter extends BaseAdapter {
 		public void onClick(View v) {
 			
 			final Button rowButton = (Button) v;
-
+			 
 			new AlertDialog.Builder(context)
 				.setTitle("Change State")
 				.setPositiveButton("Down", new DialogInterface.OnClickListener() {

@@ -25,7 +25,9 @@
                 android:layout_alignBaseline="@id/farm_name"
                 android:layout_alignBottom="@id/farm_name"
                 android:layout_marginLeft="15dp"
+                android:paddingLeft="2dp"
                 android:gravity="left"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/farm_name" />
 
             <TextView
@@ -52,6 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/farm_label"
+                android:paddingLeft="10dp"           
                 android:layout_below="@+id/row_number"
                 android:layout_marginTop="15dp"
                 android:text="@string/status" />
@@ -61,18 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="75dp"
+                android:layout_marginTop="85dp"
                 android:gravity="center_horizontal" />
-
-            <Button
-                android:id="@+id/save"
-                android:layout_marginTop="475dp"
-                android:layout_alignLeft="@id/farm_label"
-                android:layout_alignRight="@+id/farm_name"               
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_alignParentBottom="true"
-                android:text="save" />
 
             <Button
                 android:id="@+id/down_button"
@@ -82,6 +75,16 @@
                 android:layout_alignBaseline="@+id/not_down_button"
                 android:layout_toRightOf="@+id/row_number"
                 android:text="Down" />
+
+            <CheckBox
+                android:id="@+id/alarm_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/farm_label"
+                android:layout_below="@+id/farm_name"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/alarm_label" />
 
         </RelativeLayout>
        
