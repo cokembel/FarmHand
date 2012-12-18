@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="android.widget.ImageView.ScaleType"/>
 <fullyQualifiedTypeName name="android.widget.GridView"/>
 <fullyQualifiedTypeName name="android.graphics.Color"/>
-<fullyQualifiedTypeName name="com.kembel.farmhand.R.drawable"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="android.os.Parcelable"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
@@ -29,7 +28,6 @@
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="android.view.Menu"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.database.sqlite.SQLiteOpenHelper"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
@@ -47,4 +45,11 @@
 <fullyQualifiedTypeName name="com.kembel.farmhand.R.layout"/>
 <fullyQualifiedTypeName name="android.content.Context"/>
 <fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnCancelListener"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog"/>
+<fullyQualifiedTypeName name="android.text.Editable"/>
+<fullyQualifiedTypeName name="com.kembel.farmhand.R.drawable"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
 </qualifiedTypeNameHistroy>

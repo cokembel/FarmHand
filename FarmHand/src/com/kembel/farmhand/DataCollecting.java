@@ -22,7 +22,6 @@ public class DataCollecting extends Activity {
 	private NumberPicker rowNum;
 	private TextView status;
 	private Button down, notDown;
-	private Button save;
 	
     private Farm farm;
     private State currentState;
@@ -50,6 +49,31 @@ public class DataCollecting extends Activity {
         setListeners();  
     }
     
+    @Override
+	public void onDestroy() {
+		super.onDestroy();
+		String name = String.valueOf(farmName.getText());
+
+		farm.setName(name);
+	
+		if (farm.getName().trim().length() == 0) {
+			if (farm.getSize() == 0) {
+				// empty entry shouldn't be saved
+				// need to remove farm that was initially added in onCreate
+				FarmList.farms.remove(index);
+	        	Toast.makeText(DataCollecting.this, "Empty entry was not saved", Toast.LENGTH_LONG).show();	
+			} else {
+				Toast.makeText(DataCollecting.this, "Entry was saved with name: " + " foobar", Toast.LENGTH_LONG).show();
+			}
+	
+		} else {
+			FarmList.farms.set(index,farm);
+		}
+	
+		FarmList.farmAdapter.notifyDataSetChanged();
+		finish();
+	}
+    
     private void initializeFormComponents() {
     	farmName = (EditText)findViewById(R.id.farm_name);
         status = (TextView)findViewById(R.id.current_status);
@@ -57,7 +81,6 @@ public class DataCollecting extends Activity {
 
         down = (Button)findViewById(R.id.down_button);
         notDown = (Button)findViewById(R.id.not_down_button);
-        save = (Button)findViewById(R.id.save);
         
         rowNum.setMinValue(1);
         rowNum.setMaxValue(1000);
@@ -80,7 +103,6 @@ public class DataCollecting extends Activity {
     private void setListeners() {
     	 down.setOnClickListener(onDown);
          notDown.setOnClickListener(onNotDown);
-         save.setOnClickListener(onSave);
     }
     
     private NumberPicker.OnValueChangeListener onRowChange = new NumberPicker.OnValueChangeListener() {
@@ -105,55 +127,6 @@ public class DataCollecting extends Activity {
 		public void onClick(View v) {
 			recordRowState(rowNum.getValue(), State.NOT_DOWN);
 			updateRowDisplay(rowNum.getValue());
-		}
-		
-	};
-	
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-		String name = String.valueOf(farmName.getText());
-
-		if (name.trim().length() == 0) {
-        	Toast.makeText(DataCollecting.this, "hello", Toast.LENGTH_LONG).show();
-
-		}
-		farm.setName(name);
-	
-		if (farm.getName().trim().length() == 0) {
-			if (farm.getSize() == 0) {
-				// empty entry shouldn't be saved
-				// need to remove farm that was initially added in onCreate
-				FarmList.farms.remove(index);
-	        	Toast.makeText(DataCollecting.this, "Empty entry was not saved", Toast.LENGTH_LONG).show();	
-			} else {
-				Toast.makeText(DataCollecting.this, "Entry was saved with name: " + " foobar", Toast.LENGTH_LONG).show();
-			}
-	
-		} else {
-			FarmList.farms.set(index,farm);
-		}
-	
-		FarmList.farmAdapter.notifyDataSetChanged();
-		finish();
-		
-	}
-	
-	private View.OnClickListener onSave = new View.OnClickListener() {
-		
-		public void onClick(View v) {
-			
-			String name = String.valueOf(farmName.getText());
-			farm.setName(name);
-		
-			//if (index == -1) {
-			//	FarmList.farms.add(farm);
-			//} else {
-				FarmList.farms.set(index,farm);
-			//}
-			
-			FarmList.farmAdapter.notifyDataSetChanged();
-			finish();
 		}
 		
 	};
