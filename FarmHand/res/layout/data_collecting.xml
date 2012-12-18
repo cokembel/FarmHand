@@ -76,16 +76,6 @@
                 android:layout_toRightOf="@+id/row_number"
                 android:text="Down" />
 
-            <CheckBox
-                android:id="@+id/alarm_check"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/farm_label"
-                android:layout_below="@+id/farm_name"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="@string/alarm_label" />
-      
         </RelativeLayout>
        
     </ScrollView>

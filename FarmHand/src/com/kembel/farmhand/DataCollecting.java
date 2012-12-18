@@ -25,7 +25,6 @@ public class DataCollecting extends Activity {
 	private NumberPicker rowNum;
 	private TextView status;
 	private Button down, notDown;
-	private CheckBox alarmCheck;
 	
     private Farm farm;
     private State currentState;
@@ -82,7 +81,6 @@ public class DataCollecting extends Activity {
     	farmName = (EditText)findViewById(R.id.farm_name);
         status = (TextView)findViewById(R.id.current_status);
         rowNum = (NumberPicker)findViewById(R.id.row_number);
-        alarmCheck = (CheckBox)findViewById(R.id.alarm_check);
 
         down = (Button)findViewById(R.id.down_button);
         notDown = (Button)findViewById(R.id.not_down_button);
@@ -136,18 +134,6 @@ public class DataCollecting extends Activity {
 		
 	};
 	
-	private OnCheckedChangeListener onCheck = new OnCheckedChangeListener() {
-
-		public void onCheckedChanged(CompoundButton buttonView,
-				boolean isChecked) {
-			if (isChecked) {
-
-
-					
-			}
-		}
-		
-	};
 	
 	private void recordRowState(int currentRow, State state) {
 		farm.insert(currentRow, state);		

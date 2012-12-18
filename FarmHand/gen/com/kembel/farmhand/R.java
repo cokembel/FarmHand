@@ -32,30 +32,29 @@ public final class R {
         public static final int red_holo=0x7f02000d;
     }
     public static final class id {
-        public static final int add=0x7f090016;
-        public static final int alarm_check=0x7f090007;
+        public static final int add=0x7f090015;
         public static final int current_status=0x7f090002;
         public static final int down_button=0x7f090006;
-        public static final int edit=0x7f090017;
+        public static final int edit=0x7f090016;
         public static final int farm_label=0x7f090001;
         public static final int farm_name=0x7f090000;
-        public static final int first_row=0x7f09000e;
-        public static final int first_row_number=0x7f09000f;
-        public static final int item_image=0x7f09000a;
-        public static final int item_text=0x7f09000b;
-        public static final int last_row=0x7f090011;
-        public static final int last_row_number=0x7f090012;
-        public static final int menu_alarm=0x7f090015;
-        public static final int name=0x7f090008;
+        public static final int first_row=0x7f09000d;
+        public static final int first_row_number=0x7f09000e;
+        public static final int item_image=0x7f090009;
+        public static final int item_text=0x7f09000a;
+        public static final int last_row=0x7f090010;
+        public static final int last_row_number=0x7f090011;
+        public static final int menu_alarm=0x7f090014;
+        public static final int name=0x7f090007;
         public static final int not_down_button=0x7f090004;
-        public static final int row_grid=0x7f090013;
-        public static final int row_label=0x7f090009;
+        public static final int row_grid=0x7f090012;
+        public static final int row_label=0x7f090008;
         public static final int row_number=0x7f090005;
         public static final int status_label=0x7f090003;
-        public static final int tableRow1=0x7f09000c;
-        public static final int tableRow2=0x7f09000d;
-        public static final int tableRow3=0x7f090010;
-        public static final int view=0x7f090014;
+        public static final int tableRow1=0x7f09000b;
+        public static final int tableRow2=0x7f09000c;
+        public static final int tableRow3=0x7f09000f;
+        public static final int view=0x7f090013;
     }
     public static final class layout {
         public static final int data_collecting=0x7f030000;
