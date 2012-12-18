@@ -6,5 +6,6 @@
     <string name="farm_name">Farm Name:</string>
 	<string name="status">Status of Current Row</string>
 	<string name="alarm_label">Create Alarm To Check Water</string>
+	<string name="menu_alarm">Alarm</string>
     
 </resources>

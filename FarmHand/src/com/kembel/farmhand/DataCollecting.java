@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
@@ -134,6 +136,19 @@ public class DataCollecting extends Activity {
 		
 	};
 	
+	private OnCheckedChangeListener onCheck = new OnCheckedChangeListener() {
+
+		public void onCheckedChanged(CompoundButton buttonView,
+				boolean isChecked) {
+			if (isChecked) {
+
+
+					
+			}
+		}
+		
+	};
+	
 	private void recordRowState(int currentRow, State state) {
 		farm.insert(currentRow, state);		
 		rowNum.setValue(++currentRow);
@@ -175,8 +190,9 @@ public class DataCollecting extends Activity {
 			farm.setName(name);
 			
 			Intent intent = new Intent(DataCollecting.this, ViewEntry.class);
-			//intent.putExtra("Farm", farm);
 			startActivity(intent);
+		} else { // alarm
+			startActivity(new Intent(DataCollecting.this, Preferences.class));
 		}
 		
 		return super.onOptionsItemSelected(item);
