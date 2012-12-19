@@ -25,15 +25,17 @@ import android.widget.Toast;
 public class FarmList extends ListActivity {
 	
 	public static FarmListAdapter farmAdapter; 
-	public static ArrayList<Farm> farms = new ArrayList<Farm>();
+	public static ArrayList<Farm> farms = null;
 	private ListView listView;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.entry_list);
-				
-		FarmHelper.readFarms();
+		
+		if (farms == null) {
+			FarmHelper.readFarms(FarmList.this);
+		}
 		
 		if (farms.size() == 0) {
 			Toast.makeText(FarmList.this, "Hit 'ADD' on the action bar to create a farm entry", Toast.LENGTH_SHORT).show();
@@ -49,14 +51,19 @@ public class FarmList extends ListActivity {
 	
 	@Override
 	public void onDestroy() {
+		FarmHelper.writeFarms(FarmList.this);
+		
+		//farmAdapter.notifyDataSetChanged();
 		super.onDestroy();
-		try {
-			FarmHelper.writeFarms();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+
+	}
+	
+	@Override
+	public void onStop() {
+		FarmHelper.writeFarms(FarmList.this);
+		
+		//farmAdapter.notifyDataSetChanged();
+		super.onDestroy();
 	}
 
 	private OnItemClickListener onItemClick = new OnItemClickListener() {
@@ -83,6 +90,9 @@ public class FarmList extends ListActivity {
 			Intent intent = new Intent(FarmList.this, DataCollecting.class);
 			intent.putExtra("newFarm", true);
 			startActivity(intent);
+		} else {
+			farms.clear();
+			farmAdapter.notifyDataSetChanged();
 		}
 		
 		return super.onOptionsItemSelected(item);

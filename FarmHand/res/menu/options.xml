@@ -5,4 +5,8 @@
         android:icon="@drawable/menu_add"
         android:showAsAction="ifRoom|withText"
      />
+    <item android:id="@+id/delete_all"
+        android:title="Delete All"
+        android:showAsAction="never"
+    />
 </menu>

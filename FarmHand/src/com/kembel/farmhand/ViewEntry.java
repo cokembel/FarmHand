@@ -35,8 +35,6 @@ public class ViewEntry extends Activity{
 		
 		farm = FarmList.farms.get(index);
 		
-		//farm = (Farm) getIntent().getSerializableExtra("Farm");
-		
 		farmName = (TextView) findViewById(R.id.farm_name);
 		firstRow = (TextView) findViewById(R.id.first_row_number);
 		lastRow = (TextView) findViewById(R.id.last_row_number);
@@ -61,6 +59,8 @@ public class ViewEntry extends Activity{
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == R.id.edit) {
 			finish();
+		} else {
+			startActivity(new Intent(ViewEntry.this, Preferences.class));
 		}
 		
 		return super.onOptionsItemSelected(item);

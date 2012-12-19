@@ -34,8 +34,9 @@ public final class R {
     public static final class id {
         public static final int add=0x7f090015;
         public static final int current_status=0x7f090002;
+        public static final int delete_all=0x7f090016;
         public static final int down_button=0x7f090006;
-        public static final int edit=0x7f090016;
+        public static final int edit=0x7f090017;
         public static final int farm_label=0x7f090001;
         public static final int farm_name=0x7f090000;
         public static final int first_row=0x7f09000d;

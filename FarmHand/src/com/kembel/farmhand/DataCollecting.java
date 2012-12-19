@@ -177,7 +177,7 @@ public class DataCollecting extends Activity {
 			
 			Intent intent = new Intent(DataCollecting.this, ViewEntry.class);
 			startActivity(intent);
-		} else { // alarm
+		} else {
 			startActivity(new Intent(DataCollecting.this, Preferences.class));
 		}
 		

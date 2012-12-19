@@ -5,4 +5,8 @@
         android:icon="@drawable/menu_edit"
         android:showAsAction="ifRoom|withText"
      />
+    <item android:id="@+id/menu_alarm"
+        android:title="@string/menu_alarm"
+        android:showAsAction="never"
+     />
 </menu>
